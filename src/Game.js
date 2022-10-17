@@ -73,7 +73,6 @@ function Square(props) {
     render() {
       const history = this.state.history;
       const current = history[history.length - 1];
-      console.log(current)
       const winner = calculateWinner(current.squares);
   
       let status;
