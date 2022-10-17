@@ -4,7 +4,7 @@ import './App.css';
 
 function Square(props) {
     return (
-      <button className="square" onClick={props.onClick}>
+      <button className={`square square-${props.value}`} onClick={props.onClick}>
         {props.value}
       </button>
     );
