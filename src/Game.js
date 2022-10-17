@@ -78,7 +78,11 @@ function Square(props) {
       let status;
       if (winner) {
         status = 'Winner: ' + winner;
-      } else {
+      } 
+      else if (!current.squares.includes(null)){
+        status = 'Match Draw'
+      }
+      else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
   
