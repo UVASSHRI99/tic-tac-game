@@ -73,12 +73,17 @@ function Square(props) {
     render() {
       const history = this.state.history;
       const current = history[history.length - 1];
+      console.log(current)
       const winner = calculateWinner(current.squares);
   
       let status;
       if (winner) {
         status = 'Winner: ' + winner;
-      } else {
+      } 
+      else if (!current.squares.includes(null)){
+        status = 'Match Draw'
+      }
+      else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
   
