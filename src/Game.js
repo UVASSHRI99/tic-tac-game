@@ -83,7 +83,7 @@ function Square(props) {
       }
   
       return (
-        <div className="game">
+        <div className="game" style={{"justifyContent": "center"}}>
           <div className="game-board">
             <Board
               squares={current.squares}
